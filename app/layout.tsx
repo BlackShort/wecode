@@ -19,6 +19,9 @@ const fontBody = Inter({
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="../assets/wecode.png" sizes="any" />
+      </head>
       <body
         className={cn(
           'antialiased',
