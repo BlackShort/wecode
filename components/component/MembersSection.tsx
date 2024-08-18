@@ -201,13 +201,13 @@ export const MembersSection = () => {
                                             <p className="text-muted-foreground text-sm mb-2">{member.role}</p>
                                             <p className="text-muted-foreground text-xs mb-4">{member.achievements}</p>
                                             <div className="flex gap-4">
-                                                {member.instagram?.length != 0 && <a href={member.instagram} aria-label="Instagram">
+                                                {member.instagram?.length != 0 && <a href={member.instagram} target="__blank" aria-label="Instagram">
                                                     <FaInstagram className="w-6 h-6 text-muted-foreground hover:text-pink-500" />
                                                 </a>}
-                                                {member.github?.length != 0 &&<a href={member.github} aria-label="GitHub">
+                                                {member.github?.length != 0 &&<a href={member.github}  target="__blank" aria-label="GitHub">
                                                     <FaGithub className="w-6 h-6 text-muted-foreground hover:text-slate-100" />
                                                 </a>}
-                                                {member.linkedin?.length != 0 &&<a href={member.linkedin} aria-label="LinkedIn">
+                                                {member.linkedin?.length != 0 &&<a href={member.linkedin} target="__blank" aria-label="LinkedIn">
                                                     <FaLinkedin className="w-6 h-6 text-muted-foreground hover:text-blue-500" />
                                                 </a>}
                                             </div>
