@@ -6,8 +6,8 @@ import ankur from '@/assets/ankur.png';
 export const AboutUsSection = () => {
     const { scrollY } = useScroll();
 
-    const aboutTranslateY = useTransform(scrollY, [300, 400], [100, 0]); 
-    const aboutOpacity = useTransform(scrollY, [300, 350], [0.5, 1]); 
+    const aboutTranslateY = useTransform(scrollY, [300, 400], [100, 0]);
+    const aboutOpacity = useTransform(scrollY, [300, 350], [0.5, 1]);
 
     return (
         <motion.section
@@ -50,7 +50,7 @@ export const AboutUsSection = () => {
                         <p className="text-gray-700 text-justify">
                             Founded by <span className="font-semibold text-blue-700">Dr. Ankur Singh Bisht</span>, WeCode began with a vision to create a nurturing space where
                             individuals could not only learn coding but also engage with a vibrant community of like-minded
-                            enthusiasts. Ankur's passion for programming and community building led to the inception of WeCode,
+                            enthusiasts. Ankur&apos;s passion for programming and community building led to the inception of WeCode,
                             a platform that continues to inspire and support its members in their coding journey.
                         </p>
                     </motion.div>
