@@ -1,17 +1,10 @@
 "use client";
-import React from 'react';
-import { motion, useTransform, useScroll } from 'framer-motion';
 import Image from "next/image";
-import ankur from '@/assets/ankur.png';
 import priyanshu from '@/assets/priyanshu.png';
 import vibha from '@/assets/vibha.png';
 import user from '@/assets/user.jpeg';
 
 export const AboutUsSection = () => {
-    const { scrollY } = useScroll();
-
-    // Define the scale and opacity transformations based on scroll position
-
     return (
         <section id="about" className="py-16 bg-black md:py-24 px-4 md:px-8">
             <div className="max-w-6xl mx-auto">

@@ -11,7 +11,7 @@ import { HeroSection } from "@/components/component/HeroSection";
 import { MembersSection } from "@/components/component/MembersSection";
 import { PastEventsSection } from "@/components/component/PastEventsSection";
 import { useScroll, useTransform,motion } from "framer-motion";
-import { AboutUsSection } from '@/components/component/AboutUs';
+import { AboutUsSection } from '@/components/component/LeadersSection';
 
 export default function Home() {
   const { scrollY } = useScroll();

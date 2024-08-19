@@ -4,9 +4,10 @@ import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { FaBars } from "react-icons/fa";
 import wecode from '@/assets/wecode.png';
 import Image from "next/image";
+
 export const Header = () => {
     return (
-        <header className="px-4 sticky top-0 z-[99] bg-black md:px-8 py-6 flex items-center justify-between">
+        <header className="px-4 sticky top-0 z-[99] bg-black md:px-5 pt-5 pb-3 flex items-center justify-between">
             <Link href="#" className="flex items-center gap-2" prefetch={false}>
                 <Image
                     src={wecode}

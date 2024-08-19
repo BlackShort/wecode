@@ -1,11 +1,7 @@
 "use client";
-import React from 'react';
 import { motion, useTransform, useScroll } from 'framer-motion';
 import Image from "next/image";
 import ankur from '@/assets/ankur.png';
-import priyanshu from '@/assets/priyanshu.png';
-import vibha from '@/assets/vibha.png';
-import user from '@/assets/user.jpeg';
 
 export const AboutSection = () => {
     const { scrollY } = useScroll();
