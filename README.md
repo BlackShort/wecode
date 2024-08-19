@@ -1,6 +1,6 @@
 # WeCode - College Coding Club
 
-Welcome to **WeCode**, the official coding club of [Your College Name]! 🚀
+Welcome to **WeCode**, the official coding club of **Graphic Era Hill University** ! 🚀
 
 ## About Us
 
