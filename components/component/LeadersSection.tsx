@@ -1,56 +1,95 @@
 "use client";
+import React from 'react';
+import { motion, useTransform, useScroll } from 'framer-motion';
 import Image from "next/image";
 import priyanshu from '@/assets/priyanshu.png';
 import vibha from '@/assets/vibha.png';
-import user from '@/assets/user.jpeg';
+import ankit from '@/assets/ankit.png';
 
-export const AboutUsSection = () => {
+export const LeadersSection = () => {
+    const { scrollY } = useScroll();
+
+    // Generate transformations based on the scroll position
+    const xTransform1 = useTransform(scrollY, [940, 1040], [0, 0]);
+    const opacity1 = useTransform(scrollY, [940, 1040], [1, 1]);
+
+    const xTransform2 = useTransform(scrollY, [1040, 1240], [100, 0]);
+    const opacity2 = useTransform(scrollY, [1040, 1140], [0, 1]);
+
+    const xTransform3 = useTransform(scrollY, [1150, 1260], [200, 0]);
+    const opacity3 = useTransform(scrollY, [1150, 1200], [0, 1]);
+
     return (
-        <section id="about" className="py-16 bg-black md:py-24 px-4 md:px-8">
+        <section id="about" className="py-16 md:py-24 px-4 md:px-8">
             <div className="max-w-6xl mx-auto">
-                {/* Leadership Team Section */}
-                <h3 className="text-2xl md:text-3xl font-bold text-start mb-8">Meet the Leaders</h3>
-                <div className="py-16 bg-[#ffe0e0] lg:px-5 text-black rounded-[24px] md:py-24">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                        <div className="bg-white flex flex-col items-center justify-center text-black  shadow-[0px_0px_8px_3px_rgba(0,0,0,0.05)] w-[310px] h-[410px] relative rounded-[25px] py-6 text-center">
-                            <div className="rounded-full w-[150px] h-[150px] border-[3px] border-white   mx-auto mb-4 overflow-hidden">
+                <h3 className="text-2xl md:text-4xl font-bold md:text-start mb-8 text-gray-900 text-center pl-0 md:pl-12">Meet the Leaders</h3>
+                <div className="bg-[#f7f7f7] lg:px-5 text-gray-900 rounded-[24px] h-auto">
+                    <div className="relative flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-16 p-4">
+                        {/* Card 1 */}
+                        <motion.div
+                            className="bg-[#ffffff] flex flex-col items-center justify-center text-gray-900 shadow-lg w-[310px] h-[410px] rounded-[25px] py-6 text-center"
+                            style={{
+                                x: xTransform1,
+                                opacity: opacity1,
+                                zIndex: 3
+                            }}
+                        >
+                            <div className="rounded-full w-[150px] h-[150px] border-[3px] border-gray-300 mx-auto mb-4 overflow-hidden">
                                 <Image
                                     src={priyanshu}
-                                    alt="President"
+                                    alt="@President"
                                     className="object-cover object-top"
                                     priority
                                 />
                             </div>
-                            <h4 className="text-xl font-bold mb-2">Priyanshu Kumar</h4>
-                            <p className="text-gray-500 fot-semibold text-[12px]">@President</p>
-                            <button className="py-2 px-7 rounded-full bg-[#ef9270] mt-1 text-black font-semibold cursor-pointer">Connect</button>
-                        </div>
-                        <div className="bg-white flex flex-col items-center justify-center text-black  shadow-[0px_0px_8px_3px_rgba(0,0,0,0.05)] w-[310px] h-[410px] relative rounded-[25px] py-6 text-center">
-                            <div className="rounded-full w-[150px] h-[150px] border-[3px] border-white   mx-auto mb-4 overflow-hidden">
+                            <h4 className="text-xl font-bold">Priyanshu Kumar</h4>
+                            <p className="text-gray-700 font-semibold text-sm">@President</p>
+                            <button className="pt-1 pb-[0.45rem] px-7 rounded-full  bg-green-500 mt-4 text-white font-semibold cursor-pointer hover:bg-green-600">Connect</button>
+                        </motion.div>
+
+                        {/* Card 2 */}
+                        <motion.div
+                            className="bg-[#ffffff] flex flex-col items-center justify-center text-gray-900 shadow-lg w-[310px] h-[410px] rounded-[25px] py-6 text-center"
+                            style={{
+                                x: xTransform2,
+                                opacity: opacity2,
+                                zIndex: 2
+                            }}
+                        >
+                            <div className="rounded-full w-[150px] h-[150px] border-[3px] border-gray-300 mx-auto mb-4 overflow-hidden">
                                 <Image
                                     src={vibha}
-                                    alt="Vice President"
+                                    alt="@Vice President"
                                     className="object-cover object-top"
                                     priority
                                 />
                             </div>
-                            <h4 className="text-xl font-bold mb-2">Vibha Chandola</h4>
-                            <p className="text-gray-500 fot-semibold text-[12px]">@Vice President</p>
-                            <button className="py-2 px-7 rounded-full bg-[#ef9270] mt-1 text-black font-semibold cursor-pointer">Connect</button>
-                        </div>
-                        <div className="bg-white flex flex-col items-center justify-center text-black  shadow-[0px_0px_8px_3px_rgba(0,0,0,0.05)] w-[310px] h-[410px] relative rounded-[25px] py-6 text-center">
-                            <div className="rounded-full w-[150px] h-[150px] border-[3px] border-white   mx-auto mb-4 overflow-hidden">
+                            <h4 className="text-xl font-bold">Vibha Chandola</h4>
+                            <p className="text-gray-700 font-semibold text-sm">@Vice President</p>
+                            <button className="pt-1 pb-[0.45rem] px-7 rounded-full  bg-green-500 mt-4 text-white font-semibold cursor-pointer hover:bg-green-600">Connect</button>
+                        </motion.div>
+
+                        {/* Card 3 */}
+                        <motion.div
+                            className="bg-[#ffffff] flex flex-col items-center justify-center text-gray-900 shadow-lg w-[310px] h-[410px] rounded-[25px] py-6 text-center"
+                            style={{
+                                x: xTransform3,
+                                opacity: opacity3,
+                                zIndex: 1
+                            }}
+                        >
+                            <div className="rounded-full w-[150px] h-[150px] border-[3px] border-gray-300 mx-auto mb-4 overflow-hidden">
                                 <Image
-                                    src={user}
-                                    alt="Managing Director"
+                                    src={ankit}
+                                    alt="@Managing Director"
                                     className="object-cover object-top"
                                     priority
                                 />
                             </div>
-                            <h4 className="text-xl font-bold mb-2">Ankit Pandey</h4>
-                            <p className="text-gray-500 fot-semibold text-[12px]">@Managing Director</p>
-                            <button className="py-2 px-7 rounded-full bg-[#ef9270] mt-1 text-black font-semibold cursor-pointer">Connect</button>
-                        </div>
+                            <h4 className="text-xl font-bold">Ankit Pandey</h4>
+                            <p className="text-gray-700 font-semibold text-sm">@Managing Director</p>
+                            <button className="pt-1 pb-[0.45rem] px-7 rounded-full  bg-green-500 mt-4 text-white font-semibold cursor-pointer hover:bg-green-600">Connect</button>
+                        </motion.div>
                     </div>
                 </div>
             </div>

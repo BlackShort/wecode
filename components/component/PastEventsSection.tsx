@@ -1,70 +1,44 @@
+import React from 'react';
 import Image from "next/image";
-import codingBootcampImage from '@/assets/gallary.jpeg';
-import hackathonImage from '@/assets/gallary.jpeg';
-import aiWorkshopImage from '@/assets/gallary.jpeg';
+import techEvent from '@/assets/gallery.jpeg';
+import fest from '@/assets/gallery.jpeg';
+import anotherEvent from '@/assets/gallery.jpeg';
+
+// Array of event data
+const events = [
+    { src: techEvent, alt: "Tech Event", title: "Tech Innovation Summit 2024", description: "A summit focused on the latest innovations in technology and their impacts on the future." },
+    { src: fest, alt: "College Fest", title: "Annual College Fest 2024", description: "A vibrant festival celebrating the creativity and achievements of our college community." },
+    { src: anotherEvent, alt: "Art Exhibition", title: "Art Exhibition 2024", description: "An exhibition showcasing the artistic talents of our students and local artists." }
+];
 
 export const PastEventsSection = () => {
     return (
-        <section id="past-events" className="py-16 md:py-24 px-4 md:px-8 bg-[#1a1b1e]">
+        <section id="past-events" className="py-16 bg-gray-100 md:py-24 px-4 md:px-8">
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Past Events</h2>
-                    <p className="text-muted-foreground">
-                        Take a look back at some of the exciting events we’ve hosted.
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Past Events</h2>
+                    <p className="text-gray-600">
+                        Explore the moments captured from our events and activities.
                     </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div className="bg-[#2d2e32] rounded-lg shadow-lg overflow-hidden">
-                        <Image
-                            src={codingBootcampImage}
-                            alt="Coding Bootcamp 2024"
-                            className="w-full h-40 object-cover"
-                        />
-                        <div className="p-6">
-                            <h3 className="text-2xl font-bold mb-2">Coding Bootcamp 2024</h3>
-                            <p className="text-muted-foreground mb-4">March 10, 2024</p>
-                            <p className="text-muted-foreground">
-                                Our annual coding bootcamp brought together aspiring developers for a day of intense coding and learning.
-                            </p>
-                            <a href="#" className="hover:underline mt-4 inline-block">
-                                Read More
-                            </a>
+                <div className="flex flex-col md:flex-row items-center justify-around gap-6">
+                    {events.map((event, index) => (
+                        <div key={index} className="bg-slate-50 w-[24rem] rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105">
+                            <Image
+                                src={event.src}
+                                alt={event.alt}
+                                className="object-cover w-full h-[10rem]"
+                                priority
+                            />
+                            <div className="p-4">
+                                <h4 className="text-lg font-semibold mb-2 text-gray-900">{event.title}</h4>
+                                <p className="text-gray-700 mb-4 text-sm">{event.description}</p>
+                                {/* <a href="#" className="text-[#ef9270] hover:text-[#d37e5d] font-medium transition-colors duration-300 text-xs">
+                                    Read More
+                                </a> */}
+                            </div>
                         </div>
-                    </div>
-                    <div className="bg-[#2d2e32] rounded-lg shadow-lg overflow-hidden">
-                        <Image
-                            src={hackathonImage}
-                            alt="Hackathon 2023"
-                            className="w-full h-40 object-cover"
-                        />
-                        <div className="p-6">
-                            <h3 className="text-2xl font-bold mb-2">Hackathon 2023</h3>
-                            <p className="text-muted-foreground mb-4">November 5, 2023</p>
-                            <p className="text-muted-foreground">
-                                A thrilling 48-hour hackathon where participants collaborated on innovative projects and solutions.
-                            </p>
-                            <a href="#" className="hover:underline mt-4 inline-block">
-                                Read More
-                            </a>
-                        </div>
-                    </div>
-                    <div className="bg-[#2d2e32] rounded-lg shadow-lg overflow-hidden">
-                        <Image
-                            src={aiWorkshopImage}
-                            alt="AI Workshop"
-                            className="w-full h-40 object-cover"
-                        />
-                        <div className="p-6">
-                            <h3 className="text-2xl font-bold mb-2">AI Workshop</h3>
-                            <p className="text-muted-foreground mb-4">August 15, 2023</p>
-                            <p className="text-muted-foreground">
-                                An insightful workshop on Artificial Intelligence, featuring guest speakers and hands-on sessions.
-                            </p>
-                            <a href="#" className="hover:underline mt-4 inline-block">
-                                Read More
-                            </a>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </section>
