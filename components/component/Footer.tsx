@@ -2,7 +2,7 @@ import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const Footer = () => {
     return (
-        <footer className="bg-white py-8 px-4 md:px-8 border-t border-gray-200">
+        <footer className="bg-gray-100 py-8 px-4 md:px-8 border-t border-gray-200">
             <div className="max-w-5xl mx-auto flex flex-col items-center justify-center space-y-4">
                 <div className="flex gap-4">
                     <a href="#" aria-label="Twitter">
@@ -16,7 +16,7 @@ export const Footer = () => {
                     </a>
                 </div>
                 <p className="text-gray-600 text-sm text-center">
-                    &copy; 2024 WeCode. All rights reserved.
+                    Copyright &copy; 2024 WeCode | All rights reserved.
                 </p>
             </div>
         </footer>

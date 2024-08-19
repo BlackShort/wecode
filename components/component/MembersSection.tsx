@@ -15,6 +15,7 @@ import shailesh from '@/assets/shailesh.jpg';
 import manas from '@/assets/manas.jpg';
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { SiCodechef, SiLeetcode, SiCodeforces } from "react-icons/si";
+import { IoMail } from "react-icons/io5";
 
 
 const members = {
@@ -30,6 +31,7 @@ const members = {
             codeforces: '',
             codechef: '',
             leetcode: '',
+            mail: '',
         },
         {
             name: "Umesh Bisht",
@@ -42,6 +44,7 @@ const members = {
             codeforces: '',
             codechef: '',
             leetcode: '',
+            mail: '',
         },
         {
             name: "Sourav Singh Adhikari",
@@ -54,6 +57,7 @@ const members = {
             codeforces: 'https://codeforces.com/profile/CallmeSourav',
             codechef: '',
             leetcode: 'https://leetcode.com/u/sourav_singh_adhikari/',
+            mail: '',
         },
     ],
     "Data Structure": [
@@ -68,6 +72,7 @@ const members = {
             codeforces: '',
             codechef: '',
             leetcode: 'https://leetcode.com/u/divyashah09/',
+            mail: '',
         },
         {
             name: "Mohit Budhlakoti",
@@ -80,6 +85,7 @@ const members = {
             codeforces: '',
             codechef: '',
             leetcode: '',
+            mail: '',
         },
         {
             name: "Vibha Chandola",
@@ -92,6 +98,7 @@ const members = {
             codeforces: '',
             codechef: '',
             leetcode: '',
+            mail: '',
         }
     ],
     "Web Development": [
@@ -106,6 +113,7 @@ const members = {
             codeforces: '',
             codechef: '',
             leetcode: '',
+            mail: '',
         },
         {
             name: "Harshit Bisht",
@@ -118,6 +126,7 @@ const members = {
             codeforces: '',
             codechef: '',
             leetcode: '',
+            mail: '',
         },
         {
             name: "Priyanshu Kumar",
@@ -130,6 +139,7 @@ const members = {
             codeforces: '',
             codechef: '',
             leetcode: '',
+            mail: '',
         },
     ],
     Cybersecurity: [
@@ -144,6 +154,7 @@ const members = {
             codeforces: '',
             codechef: '',
             leetcode: '',
+            mail: '',
         },
         {
             name: "Piyush Taragi",
@@ -156,6 +167,7 @@ const members = {
             codeforces: '',
             codechef: '',
             leetcode: '',
+            mail: '',
         },
     ],
     "AI and ML": [
@@ -169,6 +181,7 @@ const members = {
             codeforces: '',
             codechef: '',
             leetcode: '',
+            mail: '',
         },
         {
             name: "Jatin Singh Mehra",
@@ -181,6 +194,7 @@ const members = {
             codeforces: '',
             codechef: '',
             leetcode: '',
+            mail: 'dev.jatin.singh@gmail.com',
         },
         {
             name: "Sarthak Chandvaria",
@@ -193,6 +207,7 @@ const members = {
             codeforces: '',
             codechef: '',
             leetcode: '',
+            mail: '',
         },
     ],
     "Visual Media": [
@@ -207,6 +222,7 @@ const members = {
             codeforces: '',
             codechef: '',
             leetcode: '',
+            mail: '',
         },
         {
             name: "Shailesh Verma",
@@ -219,8 +235,36 @@ const members = {
             codeforces: '',
             codechef: '',
             leetcode: '',
+            mail: '',
         },
     ]
+};
+
+const colorMapping: { [key: string]: { borderColor: string; bgColor: string } } = {
+    "Competitive Programming": {
+        borderColor: "border-blue-500",
+        bgColor: "bg-blue-100"
+    },
+    "Data Structure": {
+        borderColor: "border-green-500",
+        bgColor: "bg-green-100"
+    },
+    "Web Development": {
+        borderColor: "border-red-500",
+        bgColor: "bg-red-100"
+    },
+    "Cybersecurity": {
+        borderColor: "border-yellow-500",
+        bgColor: "bg-yellow-100"
+    },
+    "AI and ML": {
+        borderColor: "border-purple-500",
+        bgColor: "bg-purple-100"
+    },
+    "Visual Media": {
+        borderColor: "border-pink-500",
+        bgColor: "bg-pink-100"
+    },
 };
 
 export const MembersSection = () => {
@@ -233,60 +277,71 @@ export const MembersSection = () => {
                         Get to know the dedicated individuals who drive our community forward. Our members are at the heart of every event and initiative, bringing their unique skills and passion to create something extraordinary.
                     </p>
                 </div>
-                {Object.entries(members).map(([category, membersList]) => (
-                    <div key={category} className="mb-12">
-                        <h4 className="text-xl md:text-2xl font-semibold mb-6 border-blue-500 border-l-4 px-4 pb-1 w-fit bg-slate-300">{category}</h4>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                            {membersList.map((member, index) => (
-                                <div key={index} className="bg-slate-50 flex flex-col items-center text-center p-6 rounded-[20px] shadow-lg">
-                                    <div className="rounded-full w-[120px] h-[120px] border-[3px] border-slate-50 mx-auto mb-4 overflow-hidden">
-                                        <Image
-                                            src={member.image}
-                                            alt={member.name}
-                                            className="object-cover object-top"
-                                            priority
-                                        />
+                {Object.entries(members).map(([category, membersList]) => {
+                    const { borderColor, bgColor } = colorMapping[category] || {
+                        borderColor: "border-gray-500",
+                        bgColor: "bg-slate-300"
+                    };
+                    return (
+                        <div key={category} className="mb-12">
+                            <h4 className={`text-xl md:text-2xl font-semibold mb-6 ${borderColor} border-l-4 px-4 pb-1 w-fit ${bgColor}`}>{category}</h4>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                                {membersList.map((member, index) => (
+                                    <div key={index} className="bg-slate-50 flex flex-col items-center text-center p-6 rounded-[20px] shadow-lg">
+                                        <div className="rounded-full w-[120px] h-[120px] border-[3px] border-slate-50 mx-auto mb-4 overflow-hidden">
+                                            <Image
+                                                src={member.image}
+                                                alt={member.name}
+                                                className="object-cover object-top"
+                                                priority
+                                            />
+                                        </div>
+                                        <h5 className="text-lg font-semibold mb-2">{member.name}</h5>
+                                        <p className="text-gray-500 font-semibold text-[12px]">{member.role}</p>
+                                        <p className="text-gray-500 text-[12px] mt-2">{member.achievements}</p>
+                                        <div className="flex space-x-4 mt-4">
+                                            {member.mail && (
+                                                <a href={`mailto:${member.mail}`} target="__blank" aria-label="Email">
+                                                    <IoMail className="w-6 h-6 text-muted-foreground hover:text-red-500" />
+                                                </a>
+                                            )}
+                                            {member.instagram && (
+                                                <a href={member.instagram} target="__blank" aria-label="Instagram">
+                                                    <FaInstagram className="w-6 h-6 text-muted-foreground hover:text-pink-500" />
+                                                </a>
+                                            )}
+                                            {member.github && (
+                                                <a href={member.github} target="__blank" aria-label="GitHub">
+                                                    <FaGithub className="w-6 h-6 text-muted-foreground hover:text-blue-900" />
+                                                </a>
+                                            )}
+                                            {member.linkedin && (
+                                                <a href={member.linkedin} target="__blank" aria-label="LinkedIn">
+                                                    <FaLinkedin className="w-6 h-6 text-muted-foreground hover:text-blue-500" />
+                                                </a>
+                                            )}
+                                            {member.codeforces && (
+                                                <a href={member.codeforces} target="__blank" aria-label="Codeforces">
+                                                    <SiCodeforces className="w-6 h-6 text-muted-foreground hover:text-yellow-500" />
+                                                </a>
+                                            )}
+                                            {member.codechef && (
+                                                <a href={member.codechef} target="__blank" aria-label="CodeChef">
+                                                    <SiCodechef className="w-6 h-6 text-muted-foreground hover:text-orange-900" />
+                                                </a>
+                                            )}
+                                            {member.leetcode && (
+                                                <a href={member.leetcode} target="__blank" aria-label="LeetCode">
+                                                    <SiLeetcode className="w-6 h-6 text-muted-foreground hover:text-orange-500" />
+                                                </a>
+                                            )}
+                                        </div>
                                     </div>
-                                    <h5 className="text-lg font-semibold mb-2">{member.name}</h5>
-                                    <p className="text-gray-500 font-semibold text-[12px]">{member.role}</p>
-                                    <p className="text-gray-500 text-[12px] mt-2">{member.achievements}</p>
-                                    <div className="flex space-x-4 mt-4">
-                                        {member.instagram && (
-                                            <a href={member.instagram} target="__blank" aria-label="Instagram">
-                                                <FaInstagram className="w-6 h-6 text-muted-foreground hover:text-pink-500" />
-                                            </a>
-                                        )}
-                                        {member.github && (
-                                            <a href={member.github} target="__blank" aria-label="GitHub">
-                                                <FaGithub className="w-6 h-6 text-muted-foreground hover:text-slate-100" />
-                                            </a>
-                                        )}
-                                        {member.linkedin && (
-                                            <a href={member.linkedin} target="__blank" aria-label="LinkedIn">
-                                                <FaLinkedin className="w-6 h-6 text-muted-foreground hover:text-blue-500" />
-                                            </a>
-                                        )}
-                                        {member.codeforces && (
-                                            <a href={member.codeforces} target="__blank" aria-label="LinkedIn">
-                                                <SiCodeforces className="w-6 h-6 text-muted-foreground hover:text-yellow-500" />
-                                            </a>
-                                        )}
-                                        {member.codechef && (
-                                            <a href={member.codechef} target="__blank" aria-label="LinkedIn">
-                                                <SiCodechef className="w-6 h-6 text-muted-foreground hover:text-orange-900" />
-                                            </a>
-                                        )}
-                                        {member.leetcode && (
-                                            <a href={member.leetcode} target="__blank" aria-label="LinkedIn">
-                                                <SiLeetcode className="w-6 h-6 text-muted-foreground hover:text-orange-500" />
-                                            </a>
-                                        )}
-                                    </div>
-                                </div>
-                            ))}
+                                ))}
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    );
+                })}
             </div>
         </section>
     );
