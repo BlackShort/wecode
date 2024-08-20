@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 // Define icon properties with specific start and end positions
 const icons = [
-    { src: badge, alt: 'badge', start: { x: 1020, y: 50 }, end: { x: 1060, y: 150 } },
+    { src: badge, alt: 'badge', start: { x: 1040, y: 50 }, end: { x: 1080, y: 150 } },
     { src: compass, alt: 'compass', start: { x: 50, y: 350 }, end: { x: 0, y: 250 } },
 ];
 
