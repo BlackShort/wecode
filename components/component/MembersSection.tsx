@@ -142,34 +142,6 @@ const members = {
             mail: '',
         },
     ],
-    Cybersecurity: [
-        {
-            name: "Ankit Pandey",
-            role: "Managing Director",
-            image: ankit,
-            achievements: "Certified ethical hacker",
-            instagram: 'https://www.instagram.com/mr_prince_.70',
-            github: 'https://github.com/ankitpandey2004',
-            linkedin: 'https://www.linkedin.com/in/ankit-pandey-b1697928a',
-            codeforces: '',
-            codechef: '',
-            leetcode: '',
-            mail: '',
-        },
-        {
-            name: "Piyush Taragi",
-            role: "Member",
-            image: user,
-            achievements: "Specialist in network security",
-            instagram: '',
-            github: '',
-            linkedin: '',
-            codeforces: '',
-            codechef: '',
-            leetcode: '',
-            mail: '',
-        },
-    ],
     "AI and ML": [
         {
             name: "Atul Joshi",
@@ -204,6 +176,34 @@ const members = {
             instagram: 'https://www.instagram.com/sarthaxtic',
             github: 'https://github.com/sarthaxtic',
             linkedin: 'https://linkedin.com/in/sarthakchandvaria',
+            codeforces: '',
+            codechef: '',
+            leetcode: '',
+            mail: '',
+        },
+    ],
+    Cybersecurity: [
+        {
+            name: "Ankit Pandey",
+            role: "Managing Director",
+            image: ankit,
+            achievements: "Certified ethical hacker",
+            instagram: 'https://www.instagram.com/mr_prince_.70',
+            github: 'https://github.com/ankitpandey2004',
+            linkedin: 'https://www.linkedin.com/in/ankit-pandey-b1697928a',
+            codeforces: '',
+            codechef: '',
+            leetcode: '',
+            mail: '',
+        },
+        {
+            name: "Piyush Taragi",
+            role: "Member",
+            image: user,
+            achievements: "Specialist in network security",
+            instagram: '',
+            github: '',
+            linkedin: '',
             codeforces: '',
             codechef: '',
             leetcode: '',
@@ -272,9 +272,9 @@ export const MembersSection = () => {
         <section id="members" className="py-16 bg-[#e5e5e5] md:py-24 px-4 md:px-8">
             <div className="max-w-5xl mx-auto">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Meet Our Members</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Meet Our Mentors</h2>
                     <p className="text-gray-600">
-                        Get to know the dedicated individuals who drive our community forward. Our members are at the heart of every event and initiative, bringing their unique skills and passion to create something extraordinary.
+                        Get to know the dedicated individuals who drive our community forward. Our mentors are at the heart of every event and initiative, bringing their unique skills and passion to create something extraordinary.
                     </p>
                 </div>
                 {Object.entries(members).map(([category, membersList]) => {
