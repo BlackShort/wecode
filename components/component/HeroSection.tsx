@@ -5,13 +5,11 @@ import badge from '@/assets/svg/badge_right.svg';
 import compass from '@/assets/svg/compass_right.svg';
 import Image from 'next/image';
 
-// Define icon properties with specific start and end positions
 const icons = [
     { src: badge, alt: 'badge', start: { x: 1040, y: 50 }, end: { x: 1080, y: 150 } },
     { src: compass, alt: 'compass', start: { x: 50, y: 350 }, end: { x: 0, y: 250 } },
 ];
 
-// Function to generate a slower animation with delay based on the index
 const generateAnimation = (endPosition: { x: number, y: number }, index: number) => ({
     x: endPosition.x,
     y: endPosition.y,
