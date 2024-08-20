@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { AboutUsSection } from "@/components/component/AboutSection";
 import { ContactSection } from "@/components/component/ContactSection";
 import { DomainsSection } from "@/components/component/DomainsSection";
@@ -13,56 +13,51 @@ import { MembersSection } from "@/components/component/MembersSection";
 import { PastEventsSection } from "@/components/component/PastEventsSection";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { LeadersSection } from '@/components/component/LeadersSection';
+import { FaAngleUp } from "react-icons/fa6";
 
 export default function Home() {
   const { scrollY } = useScroll();
+  const [showButton, setShowButton] = useState(false);
 
-  // Animations for HeroSection
-  const heroScale = useTransform(scrollY, [0, 300], [1, 1.5]);
-  const heroOpacity = useTransform(scrollY, [0, 300], [1, 0]);
+  // Show the button when the user scrolls down 300px
+  useEffect(() => {
+    const handleScroll = (currentScrollY: number) => {
+      if (currentScrollY > 300) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    };
 
-  // Animations for AboutUsSection
-  const aboutScale = useTransform(scrollY, [300, 600], [1, 1]);
-  const aboutOpacity = useTransform(scrollY, [300, 600], [1, 1]);
+    const unsubscribe = scrollY.on("change", handleScroll);
 
-  // Animations for LeadersSection
-  const leadersScale = useTransform(scrollY, [600, 900], [1, 1.5]);
-  const leadersOpacity = useTransform(scrollY, [600, 900], [0, 1]);
+    return () => unsubscribe();
+  }, [scrollY]);
 
-  // Animations for DomainsSection
-  const domainsScale = useTransform(scrollY, [900, 1200], [1, 1.5]);
-  const domainsOpacity = useTransform(scrollY, [900, 1200], [0, 1]);
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
-  // Animations for MembersSection
-  const membersScale = useTransform(scrollY, [1200, 1500], [1, 1.5]);
-  const membersOpacity = useTransform(scrollY, [1200, 1500], [0, 1]);
+  const buttonVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 }
+  };
 
-  // Animations for GallerySection
-  const galleryScale = useTransform(scrollY, [1500, 1800], [1, 1.5]);
-  const galleryOpacity = useTransform(scrollY, [1500, 1800], [0, 1]);
-
-  // Animations for PastEventsSection
-  const pastEventsScale = useTransform(scrollY, [1800, 2100], [1, 1.5]);
-  const pastEventsOpacity = useTransform(scrollY, [1800, 2100], [0, 1]);
-
-  // Animations for EventsSection
-  const eventsScale = useTransform(scrollY, [2100, 2400], [1, 1.5]);
-  const eventsOpacity = useTransform(scrollY, [2100, 2400], [0, 1]);
-
-  // Animations for ContactSection
-  const contactScale = useTransform(scrollY, [2400, 2700], [1, 1.5]);
-  const contactOpacity = useTransform(scrollY, [2400, 2700], [0, 1]);
+  const heroScale = useTransform(scrollY, [0, 500], [1, 1.5]);
+  const heroOpacity = useTransform(scrollY, [0, 500], [1, 0]);
 
   return (
-    <div className="text-text min-h-[100dvh] flex flex-col overflow-x-hidden">
+    <div className="text-text min-h-[100dvh] flex flex-col overflow-x-hidden relative">
       <Header />
       <motion.main className="flex-1 overflow-x-hidden">
-        <motion.div
-          className="flex-1 overflow-x-hidden"
-          style={{ scale: heroScale, opacity: heroOpacity }}
-        >
-          <HeroSection />
-        </motion.div>
+        <div className='w-full h-[85vh] overflow-hidden'>
+          <motion.div
+            className="flex-1 overflow-x-hidden"
+            style={{ scale: heroScale, opacity: heroOpacity }}
+          >
+            <HeroSection />
+          </motion.div>
+        </div>
         <AboutUsSection />
         <LeadersSection />
         <DomainsSection />
@@ -73,6 +68,20 @@ export default function Home() {
         <ContactSection />
       </motion.main>
       <Footer />
+
+      {showButton && (
+        <motion.button
+          className="fixed z-30 bottom-5 right-5 bg-green-500 text-white flex items-center justify-center w-12 h-12 rounded-full shadow-xl"
+          onClick={scrollToTop}
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+          variants={buttonVariants}
+          transition={{ duration: 0.3 }}
+        >
+          <FaAngleUp fontSize={27} />
+        </motion.button>
+      )}
     </div>
   );
 }

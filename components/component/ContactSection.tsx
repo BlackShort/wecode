@@ -1,5 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { motion } from 'framer-motion';
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Textarea } from "../ui/textarea";
 
 export const ContactSection = () => {
     return (
@@ -13,9 +25,51 @@ export const ContactSection = () => {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                 >
-                    <Button className="px-8 pt-2 pb-[0.7rem] text-lg bg-green-500 text-white">Contact Us</Button>
+                    <ContactForm />
                 </motion.div>
             </div>
         </section>
     );
 };
+
+
+const ContactForm = () => {
+    return (
+        <Dialog>
+            <DialogTrigger asChild>
+                <Button variant="outline" className="hidden md:inline-flex bg-green-500 text-white hover:bg-green-600">Contact Us</Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[425px]">
+                <DialogHeader>
+                    <DialogTitle>Contact Us</DialogTitle>
+                    <DialogDescription>
+                        Fill out the form below and we'll get back to you as soon as possible.
+                    </DialogDescription>
+                </DialogHeader>
+                <div className="grid gap-4 py-4">
+                    <div className="flex flex-col gap-2">
+                        <Label htmlFor="name">
+                            Name
+                        </Label>
+                        <Input id="name" placeholder="Enter your name" />
+                    </div>
+                    <div className="flex flex-col gap-2">
+                        <Label htmlFor="email">
+                            Email
+                        </Label>
+                        <Input id="email" type="email" placeholder="Enter your email" />
+                    </div>
+                    <div className="flex flex-col gap-2">
+                        <Label htmlFor="message">
+                            Message
+                        </Label>
+                        <Textarea id="message" placeholder="Enter your message" />
+                    </div>
+                </div>
+                <DialogFooter>
+                    <Button type="submit">Send Message</Button>
+                </DialogFooter>
+            </DialogContent>
+        </Dialog>
+    )
+}

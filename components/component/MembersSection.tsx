@@ -225,7 +225,7 @@ const members = {
             mail: '',
         },
         {
-            name: "Shailesh Verma",
+            name: "Shailesh Jukaria",
             role: "Member",
             image: shailesh,
             achievements: "Expert in video production",

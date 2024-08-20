@@ -13,11 +13,11 @@ export const LeadersSection = () => {
     const xTransform1 = useTransform(scrollY, [940, 1040], [0, 0]);
     const opacity1 = useTransform(scrollY, [940, 1040], [1, 1]);
 
-    const xTransform2 = useTransform(scrollY, [1040, 1240], [100, 0]);
-    const opacity2 = useTransform(scrollY, [1040, 1140], [0, 1]);
+    const xTransform2 = useTransform(scrollY, [970, 1070], [100, 0]);
+    const opacity2 = useTransform(scrollY, [970, 1070], [0, 1]);
 
-    const xTransform3 = useTransform(scrollY, [1150, 1260], [200, 0]);
-    const opacity3 = useTransform(scrollY, [1150, 1200], [0, 1]);
+    const xTransform3 = useTransform(scrollY, [1080, 1190], [200, 0]);
+    const opacity3 = useTransform(scrollY, [1080, 1130], [0, 1]);
 
     return (
         <section id="about" className="py-16 md:py-24 px-4 md:px-8">
