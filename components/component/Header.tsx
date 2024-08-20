@@ -91,7 +91,7 @@ const DialogBox = () => {
                 <DialogHeader>
                     <DialogTitle>Join Us</DialogTitle>
                     <DialogDescription>
-                        Fill out the form below and we'll get back to you as soon as possible.
+                        Fill out the form below and we&apos;ll get back to you as soon as possible.
                     </DialogDescription>
                 </DialogHeader>
                 <div className="grid gap-4 py-4">

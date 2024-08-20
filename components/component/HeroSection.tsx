@@ -2,12 +2,7 @@
 import { motion } from 'framer-motion';
 import { WavyBackground } from "@/components/ui/wavy-background";
 import badge from '@/assets/svg/badge_right.svg';
-import bell from '@/assets/svg/bell_right.svg';
-import box from '@/assets/svg/box_right.svg';
-import bulb from '@/assets/svg/bulb_right.svg';
 import compass from '@/assets/svg/compass_right.svg';
-import gear from '@/assets/svg/gear_right.svg';
-import headphone from '@/assets/svg/headphone_right.svg';
 import Image from 'next/image';
 
 // Define icon properties with specific start and end positions
