@@ -1,14 +1,22 @@
 import React from 'react';
 import Image from "next/image";
-import techEvent from '@/assets/gallery.jpeg';
-import fest from '@/assets/gallery.jpeg';
-import anotherEvent from '@/assets/gallery.jpeg';
+import event1 from '@/assets/past_events/hackthon1.jpg';
+import event2 from '@/assets/past_events/hackthon2.jpg';
 
 // Array of event data
 const events = [
-    { src: techEvent, alt: "Tech Event", title: "Tech Innovation Summit 2024", description: "A summit focused on the latest innovations in technology and their impacts on the future." },
-    { src: fest, alt: "College Fest", title: "Annual College Fest 2024", description: "A vibrant festival celebrating the creativity and achievements of our college community." },
-    { src: anotherEvent, alt: "Art Exhibition", title: "Art Exhibition 2024", description: "An exhibition showcasing the artistic talents of our students and local artists." }
+    {
+        src: event1,
+        alt: "CodeAthon",
+        title: "CodeAthon - 2023",
+        description: "CodeAthon 2023, organized by WeCode, is a premier coding event showcasing top programming talent."
+    },
+    {
+        src: event2,
+        alt: "Coding Competition",
+        title: "Brainer's Week - 2023",
+        description: "A vibrant festival organized by GEHU Bhimtal in collaboration with its first startup, Trusting Brains."
+    },
 ];
 
 export const PastEventsSection = () => {

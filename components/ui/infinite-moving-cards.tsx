@@ -6,7 +6,7 @@ import { StaticImageData } from "next/image";
 export const InfiniteMovingCards = ({
   items,
   direction = "left",
-  speed = "fast",
+  speed = "slow",
   pauseOnHover = true,
   className,
 }: {
@@ -88,13 +88,18 @@ export const InfiniteMovingCards = ({
         )}
       >
         {items.map((item, index) => (
-          <div key={index} className="relative w-[25rem] h-[250px]">
+          <div key={index}
+            className="relative w-[25rem] h-[250px] bg-gray-200 rounded-lg overflow-hidden">
             <Image
               src={item.src}
               alt={item.alt}
-              layout="fill"
-              className="object-cover rounded-lg"
-              priority
+              fill
+              quality={70}
+              objectFit="cover"
+              className="rounded-lg"
+              loading="eager"
+              sizes="25rem"
+              placeholder="blur"
             />
           </div>
         ))}

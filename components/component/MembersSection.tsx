@@ -13,6 +13,9 @@ import ankit from '@/assets/ankit.png';
 import atul from '@/assets/atul.jpg';
 import shailesh from '@/assets/shailesh.jpg';
 import manas from '@/assets/manas.jpg';
+import piyush from '@/assets/piyush.jpg';
+import umesh from '@/assets/umesh.jpg';
+import sourav from '@/assets/sourav.jpg';
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { SiCodechef, SiLeetcode, SiCodeforces } from "react-icons/si";
 import { IoMail } from "react-icons/io5";
@@ -24,33 +27,33 @@ const members = {
             name: "Naman Kandpal",
             role: "Member",
             image: naman,
-            achievements: "Published articles on competitive programming",
+            tagline: 'Coding your way to competitive excellence',
             instagram: '',
-            github: 'https://github.com/Naman-Kandpal',
+            github: '',
             linkedin: 'https://www.linkedin.com/in/naman-kandpal/',
-            codeforces: '',
+            codeforces: 'http://codeforces.com/profile/smeshitnam',
             codechef: '',
-            leetcode: '',
+            leetcode: 'http://codeforces.com/profile/smeshitnam',
             mail: '',
         },
         {
             name: "Umesh Bisht",
             role: "Member",
-            image: user,
-            achievements: "Contributor to open-source projects",
+            image: umesh,
+            tagline: 'Try Again!',
             instagram: '',
-            github: 'https://github.com/Naman-Kandpal',
-            linkedin: 'https://www.linkedin.com/in/naman-kandpal/',
-            codeforces: '',
+            github: '',
+            linkedin: 'https://www.linkedin.com/in/umesh-bisht-10713624b',
+            codeforces: 'https://codeforces.com/profile/Umesh_singh',
             codechef: '',
-            leetcode: '',
+            leetcode: 'https://leetcode.com/u/coder_Beast/',
             mail: '',
         },
         {
             name: "Sourav Singh Adhikari",
             role: "Member",
-            image: user,
-            achievements: "Top coder in national contest",
+            image: sourav,
+            tagline: 'Solving challenges with precision and speed',
             instagram: '',
             github: '',
             linkedin: 'https://www.linkedin.com/in/sourav-singh-adhikari-4213231b7/',
@@ -65,7 +68,7 @@ const members = {
             name: "Divya Shah",
             role: "Member",
             image: divya,
-            achievements: "Expert in algorithms",
+            tagline: 'DSA enthusiast',
             instagram: 'https://www.instagram.com/d.ivya.x',
             github: '',
             linkedin: 'https://www.linkedin.com/in/divya-shah-5b654b29b/',
@@ -78,26 +81,26 @@ const members = {
             name: "Mohit Budhlakoti",
             role: "Member",
             image: mohit,
-            achievements: "Lecturer on data structures",
+            tagline: 'Organizing data for efficient algorithms',
             instagram: '',
             github: 'https://github.com/mohitxd-fr',
             linkedin: 'https://www.linkedin.com/in/mohit-fr',
             codeforces: '',
             codechef: '',
-            leetcode: '',
+            leetcode: 'https://leetcode.com/u/moheat/',
             mail: '',
         },
         {
             name: "Vibha Chandola",
             role: "Vice President",
             image: vibha,
-            achievements: "Winner of regional hackathon",
-            instagram: 'https://www.instagram.com/vibha_chandola_/',
+            tagline: 'Master the Core of Efficient Coding',
+            instagram: '',
             github: 'https://github.com/vibha-cloud',
             linkedin: 'https://www.linkedin.com/in/vibha-chandola/',
             codeforces: '',
             codechef: '',
-            leetcode: '',
+            leetcode: 'https://leetcode.com/u/vc_vibha23/',
             mail: '',
         }
     ],
@@ -106,7 +109,7 @@ const members = {
             name: "Jeevan Joshi",
             role: "Member",
             image: jeevan,
-            achievements: "Developer of popular web apps",
+            tagline: "Building dynamic websites for the future",
             instagram: 'https://www.instagram.com/jeevanjoshii',
             github: 'https://github.com/JeevanJoshi4434',
             linkedin: 'https://www.linkedin.com/in/-jeevanjoshi/',
@@ -119,7 +122,7 @@ const members = {
             name: "Harshit Bisht",
             role: "Member",
             image: harshit,
-            achievements: "Full stack developer and mentor",
+            tagline: "Crafting seamless online experiences",
             instagram: 'https://www.instagram.com/harshitbisht_18/',
             github: 'https://github.com/harshitbisht18',
             linkedin: 'http://www.linkedin.com/in/harshit-bisht-7x18',
@@ -132,7 +135,7 @@ const members = {
             name: "Priyanshu Kumar",
             role: "President",
             image: priyanshu,
-            achievements: "UI/UX designer with multiple awards",
+            tagline: 'Transforming ideas into interactive web designs',
             instagram: 'https://www.instagram.com/priyanshukumar_04/',
             github: 'https://github.com/BlackShort',
             linkedin: 'https://www.linkedin.com/in/priyanshu-kumar7374/',
@@ -147,7 +150,7 @@ const members = {
             name: "Atul Joshi",
             role: "Member",
             image: atul,
-            achievements: "Data scientist with multiple publications",
+            tagline: "Empowering innovations with AI & ML Excellence",
             github: 'https://github.com/AtulJoshi1206',
             linkedin: 'https://www.linkedin.com/in/atul-joshi-54928018a',
             codeforces: '',
@@ -159,7 +162,7 @@ const members = {
             name: "Jatin Singh Mehra",
             role: "Member",
             image: jatin,
-            achievements: "AI engineer with several patents",
+            tagline: 'Crafting smarter solutions through AI.',
             instagram: '',
             github: 'https://github.com/dev-jatin-mehra',
             linkedin: '',
@@ -172,8 +175,8 @@ const members = {
             name: "Sarthak Chandvaria",
             role: "Member",
             image: sarthak,
-            achievements: "Researcher in machine learning",
-            instagram: 'https://www.instagram.com/sarthaxtic',
+            tagline: 'Turning data into intelligent decisions',
+            instagram: '',
             github: 'https://github.com/sarthaxtic',
             linkedin: 'https://linkedin.com/in/sarthakchandvaria',
             codeforces: '',
@@ -187,27 +190,27 @@ const members = {
             name: "Ankit Pandey",
             role: "Managing Director",
             image: ankit,
-            achievements: "Certified ethical hacker",
+            tagline: 'Don’t get hacked. Get protected.',
             instagram: 'https://www.instagram.com/mr_prince_.70',
-            github: 'https://github.com/ankitpandey2004',
+            github: '',
             linkedin: 'https://www.linkedin.com/in/ankit-pandey-b1697928a',
             codeforces: '',
             codechef: '',
             leetcode: '',
-            mail: '',
+            mail: 'Hackerankit2025@gmail.com',
         },
         {
             name: "Piyush Taragi",
             role: "Member",
-            image: user,
-            achievements: "Specialist in network security",
-            instagram: '',
+            image: piyush,
+            tagline: 'Certified Ethical Hacker (EC Council)',
+            instagram: 'https://www.instagram.com/mahender_pratap_singh_',
             github: '',
-            linkedin: '',
+            linkedin: 'https://www.linkedin.com/in/piyush-taragi-41902127a',
             codeforces: '',
             codechef: '',
             leetcode: '',
-            mail: '',
+            mail: 'Piyushtaragi452@gmail.com',
         },
     ],
     "Visual Media": [
@@ -215,7 +218,7 @@ const members = {
             name: "Manas Verma",
             role: "Member",
             image: manas,
-            achievements: "Award-winning graphic designer",
+            tagline: 'Capturing moments, creating timeless art',
             instagram: 'https://www.instagram.com/manas_v.03',
             github: '',
             linkedin: 'http://linkedin.com/in/manas-verma-6174ab289',
@@ -228,9 +231,9 @@ const members = {
             name: "Shailesh Jukaria",
             role: "Member",
             image: shailesh,
-            achievements: "Expert in video production",
+            tagline: 'Framing life through the lens',
             instagram: 'https://www.instagram.com/shaileshjukaria',
-            github: 'https://github.com/shaileshjukaria',
+            github: '',
             linkedin: 'https://www.linkedin.com/in/shailesh-jukaria-1500b4265',
             codeforces: '',
             codechef: '',
@@ -272,9 +275,9 @@ export const MembersSection = () => {
         <section id="members" className="py-16 bg-[#e5e5e5] md:py-24 px-4 md:px-8">
             <div className="max-w-5xl mx-auto">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Meet Our Mentors</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Meet Our Members</h2>
                     <p className="text-gray-600">
-                        Get to know the dedicated individuals who drive our community forward. Our mentors are at the heart of every event and initiative, bringing their unique skills and passion to create something extraordinary.
+                        Get to know the dedicated individuals who drive our community forward. Our member are at the heart of every event and initiative, bringing their unique skills and passion to create something extraordinary.
                     </p>
                 </div>
                 {Object.entries(members).map(([category, membersList]) => {
@@ -298,7 +301,7 @@ export const MembersSection = () => {
                                         </div>
                                         <h5 className="text-lg font-semibold mb-2">{member.name}</h5>
                                         <p className="text-gray-500 font-semibold text-[12px]">{member.role}</p>
-                                        <p className="text-gray-500 text-[12px] mt-2">{member.achievements}</p>
+                                        {member.tagline && <p className="text-gray-500 text-[12px] mt-2">{member.tagline}</p>}
                                         <div className="flex space-x-4 mt-4">
                                             {member.mail && (
                                                 <a href={`mailto:${member.mail}`} target="__blank" aria-label="Email">

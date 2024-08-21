@@ -5,21 +5,9 @@ import { motion } from 'framer-motion';
 // Event data array
 const events = [
     {
-        title: "Coding Bootcamp",
-        date: "December 12, 2024",
-        description: "An intensive bootcamp to sharpen your coding skills with hands-on projects.",
-        location: "Online"
-    },
-    {
-        title: "AI Workshop",
-        date: "January 15, 2025",
-        description: "A workshop exploring the latest trends and technologies in artificial intelligence.",
-        location: "Campus"
-    },
-    {
         title: "Hackathon",
-        date: "February 20, 2025",
-        description: "A 48-hour hackathon to build innovative projects and win exciting prizes.",
+        date: "October 25, 2024",
+        description: "A 72-hour hackathon to build innovative projects and win exciting prizes.",
         location: "Campus"
     },
 ];
