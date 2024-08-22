@@ -63,7 +63,7 @@ const members = {
             mail: '',
         },
     ],
-    "Data Structure": [
+    "Data Structures & Algorithms": [
         {
             name: "Divya Shah",
             role: "Member",

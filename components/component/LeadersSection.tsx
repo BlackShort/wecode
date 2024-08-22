@@ -5,6 +5,8 @@ import Image from "next/image";
 import priyanshu from '@/assets/priyanshu.png';
 import vibha from '@/assets/vibha.png';
 import ankit from '@/assets/ankit.png';
+import Link from 'next/link';
+import { Button } from '../ui/button';
 
 export const LeadersSection = () => {
     const { scrollY } = useScroll();
@@ -44,7 +46,9 @@ export const LeadersSection = () => {
                             </div>
                             <h4 className="text-xl font-bold">Priyanshu Kumar</h4>
                             <p className="text-gray-700 font-semibold text-sm">@President</p>
-                            <button className="pt-1 pb-[0.45rem] px-7 rounded-full  bg-green-500 mt-4 text-white font-semibold cursor-pointer hover:bg-green-600">Connect</button>
+                            <Link target='_blank' href={'https://www.linkedin.com/in/priyanshu-kumar7374/'}>
+                                <Button variant="outline" className="inline-flex bg-green-500 mt-4 rounded-full text-white hover:bg-green-600">Connect</Button>
+                            </Link>
                         </motion.div>
 
                         {/* Card 2 */}
@@ -66,7 +70,9 @@ export const LeadersSection = () => {
                             </div>
                             <h4 className="text-xl font-bold">Vibha Chandola</h4>
                             <p className="text-gray-700 font-semibold text-sm">@Vice President</p>
-                            <button className="pt-1 pb-[0.45rem] px-7 rounded-full  bg-green-500 mt-4 text-white font-semibold cursor-pointer hover:bg-green-600">Connect</button>
+                            <Link target='_blank' href={'https://www.linkedin.com/in/vibha-chandola/'}>
+                                <Button variant="outline" className="inline-flex bg-green-500 mt-4 rounded-full text-white hover:bg-green-600">Connect</Button>
+                            </Link>
                         </motion.div>
 
                         {/* Card 3 */}
@@ -88,7 +94,9 @@ export const LeadersSection = () => {
                             </div>
                             <h4 className="text-xl font-bold">Ankit Pandey</h4>
                             <p className="text-gray-700 font-semibold text-sm">@Managing Director</p>
-                            <button className="pt-1 pb-[0.45rem] px-7 rounded-full  bg-green-500 mt-4 text-white font-semibold cursor-pointer hover:bg-green-600">Connect</button>
+                            <Link target='_blank' href={'https://www.linkedin.com/in/ankit-pandey-b1697928a'}>
+                                <Button variant="outline" className="inline-flex bg-green-500 mt-4 rounded-full text-white hover:bg-green-600">Connect</Button>
+                            </Link>
                         </motion.div>
                     </div>
                 </div>
