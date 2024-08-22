@@ -33,7 +33,7 @@ const members = {
             linkedin: 'https://www.linkedin.com/in/naman-kandpal/',
             codeforces: 'http://codeforces.com/profile/smeshitnam',
             codechef: '',
-            leetcode: 'http://codeforces.com/profile/smeshitnam',
+            leetcode: 'http://leetcode.com/u/smeshitnam/',
             mail: '',
         },
         {
