@@ -4,13 +4,13 @@ import { motion, useInView } from 'framer-motion';
 
 const domains = [
     {
-        icon: <FaCode className="text-4xl text-accent mb-4 mx-auto" />,
+        icon: <FaTrophy className="text-4xl text-accent mb-4 mx-auto" />,
         title: "Competitive Programming",
         description: "Enhance your problem-solving skills through exciting coding challenges and contests."
     },
     {
-        icon: <FaTrophy className="text-4xl text-accent mb-4 mx-auto" />,
-        title: "Data Structures",
+        icon: <FaCode className="text-4xl text-accent mb-4 mx-auto" />,
+        title: "Data Structures & Algorithms",
         description: "Master fundamental data structures and algorithms to improve your programming proficiency."
     },
     {

@@ -14,7 +14,7 @@ const events = [
     {
         src: event2,
         alt: "Coding Competition",
-        title: "Brainer's Week - 2023",
+        title: "Brainer's Week - 2024",
         description: "A vibrant festival organized by GEHU Bhimtal in collaboration with its first startup, Trusting Brains."
     },
 ];

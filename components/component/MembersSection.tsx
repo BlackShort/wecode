@@ -94,7 +94,7 @@ const members = {
             name: "Vibha Chandola",
             role: "Vice President",
             image: vibha,
-            tagline: 'Master the Core of Efficient Coding',
+            tagline: 'Mastering the Core of Efficient Coding',
             instagram: '',
             github: 'https://github.com/vibha-cloud',
             linkedin: 'https://www.linkedin.com/in/vibha-chandola/',
@@ -248,7 +248,7 @@ const colorMapping: { [key: string]: { borderColor: string; bgColor: string } } 
         borderColor: "border-blue-500",
         bgColor: "bg-blue-100"
     },
-    "Data Structure": {
+    "Data Structures & Algorithms": {
         borderColor: "border-green-500",
         bgColor: "bg-green-100"
     },

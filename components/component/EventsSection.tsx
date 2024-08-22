@@ -1,6 +1,7 @@
 "use client";
-import React from "react";
+import wecode from "@/assets/wecode-light.png";
 import { motion } from 'framer-motion';
+import Image from "next/image";
 
 // Event data array
 const events = [
@@ -8,7 +9,8 @@ const events = [
         title: "Hackathon",
         date: "October 25, 2024",
         description: "A 72-hour hackathon to build innovative projects and win exciting prizes.",
-        location: "Campus"
+        location: "Campus",
+        src: wecode,
     },
 ];
 
@@ -24,13 +26,21 @@ export const EventsSection: React.FC = () => {
                     {events.map((event, index) => (
                         <motion.div
                             key={index}
-                            className={`p-6 rounded-lg shadow-md transition-transform duration-300 ease-in-out bg-slate-50`}
+                            className={`flex flex-col items-center justify-center  p-6 rounded-lg shadow-md transition-transform duration-300 ease-in-out bg-slate-50`}
                             whileHover={{ scale: 1.05 }}
                         >
-                            <h3 className="text-xl font-semibold mb-2 text-gray-900">{event.title}</h3>
-                            <p className="text-sm text-gray-600 mb-2">{event.date}</p>
-                            <p className="text-gray-800 mb-4">{event.description}</p>
-                            <p className="text-sm text-gray-500">Location: {event.location}</p>
+                            <Image
+                                src={event.src}
+                                alt={event.title}
+                                className="object-cover w-[10rem] h-[10rem]"
+                                priority
+                            />
+                            <div className="flex flex-col items-start justify-start">
+                                <h3 className="text-xl font-semibold mb-2 text-gray-900">{event.title}</h3>
+                                <p className="text-sm text-gray-600 mb-2">{event.date}</p>
+                                <p className="text-gray-800 mb-4">{event.description}</p>
+                                <p className="text-sm text-gray-500">Location: {event.location}</p>
+                            </div>
                         </motion.div>
                     ))}
                 </div>

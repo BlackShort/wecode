@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { motion } from 'framer-motion';
+import wecodeEvent from '@/assets/WeCode_Link.jpg';
 import {
     Dialog,
     DialogContent,
@@ -12,6 +13,8 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "../ui/textarea";
+import Image from "next/image";
+import Link from "next/link";
 
 export const ContactSection = () => {
     return (
@@ -21,12 +24,23 @@ export const ContactSection = () => {
                 <p className="text-text">
                     Have any questions or want to join WeCode? Feel free to reach out to us!
                 </p>
-                <motion.div
+                {/* <motion.div
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                 >
                     <ContactForm />
-                </motion.div>
+                </motion.div> */}
+                <div className="rounded-full w-[25rem] h-[25rem] border-[3px] border-slate-50 mx-auto">
+                    <Image
+                        src={wecodeEvent}
+                        alt={'WeCode'}
+                        className="object-cover object-top"
+                        priority
+                    />
+                </div>
+                <Link href={'https://chat.whatsapp.com/BuU2bAc6h7n3KEPyG8ZXGe'}>
+                    <Button variant="outline" className="hidden md:inline-flex bg-green-500 mt-4 text-white hover:bg-green-600">Let's Connect</Button>
+                </Link>
             </div>
         </section>
     );
@@ -66,9 +80,9 @@ const ContactForm = () => {
                         <Textarea id="message" placeholder="Enter your message" />
                     </div>
                 </div>
-                <DialogFooter>
+                {/* <DialogFooter>
                     <Button type="submit">Send Message</Button>
-                </DialogFooter>
+                </DialogFooter> */}
             </DialogContent>
         </Dialog>
     )
