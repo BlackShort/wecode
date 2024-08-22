@@ -1,18 +1,18 @@
 import { Button } from "@/components/ui/button";
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import wecodeEvent from '@/assets/WeCode_Link.jpg';
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-    DialogTrigger,
-} from "@/components/ui/dialog"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "../ui/textarea";
+// import {
+//     Dialog,
+//     DialogContent,
+//     DialogDescription,
+//     DialogFooter,
+//     DialogHeader,
+//     DialogTitle,
+//     DialogTrigger,
+// } from "@/components/ui/dialog"
+// import { Input } from "@/components/ui/input"
+// import { Label } from "@/components/ui/label"
+// import { Textarea } from "../ui/textarea";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -47,43 +47,43 @@ export const ContactSection = () => {
 };
 
 
-const ContactForm = () => {
-    return (
-        <Dialog>
-            <DialogTrigger asChild>
-                <Button variant="outline" className="hidden md:inline-flex bg-green-500 text-white hover:bg-green-600">Contact Us</Button>
-            </DialogTrigger>
-            <DialogContent className="sm:max-w-[425px]">
-                <DialogHeader>
-                    <DialogTitle>Contact Us</DialogTitle>
-                    <DialogDescription>
-                        Fill out the form below and we&apos;ll get back to you as soon as possible.
-                    </DialogDescription>
-                </DialogHeader>
-                <div className="grid gap-4 py-4">
-                    <div className="flex flex-col gap-2">
-                        <Label htmlFor="name">
-                            Name
-                        </Label>
-                        <Input id="name" placeholder="Enter your name" />
-                    </div>
-                    <div className="flex flex-col gap-2">
-                        <Label htmlFor="email">
-                            Email
-                        </Label>
-                        <Input id="email" type="email" placeholder="Enter your email" />
-                    </div>
-                    <div className="flex flex-col gap-2">
-                        <Label htmlFor="message">
-                            Message
-                        </Label>
-                        <Textarea id="message" placeholder="Enter your message" />
-                    </div>
-                </div>
-                {/* <DialogFooter>
-                    <Button type="submit">Send Message</Button>
-                </DialogFooter> */}
-            </DialogContent>
-        </Dialog>
-    )
-}
+// const ContactForm = () => {
+//     return (
+//         <Dialog>
+//             <DialogTrigger asChild>
+//                 <Button variant="outline" className="hidden md:inline-flex bg-green-500 text-white hover:bg-green-600">Contact Us</Button>
+//             </DialogTrigger>
+//             <DialogContent className="sm:max-w-[425px]">
+//                 <DialogHeader>
+//                     <DialogTitle>Contact Us</DialogTitle>
+//                     <DialogDescription>
+//                         Fill out the form below and we&apos;ll get back to you as soon as possible.
+//                     </DialogDescription>
+//                 </DialogHeader>
+//                 <div className="grid gap-4 py-4">
+//                     <div className="flex flex-col gap-2">
+//                         <Label htmlFor="name">
+//                             Name
+//                         </Label>
+//                         <Input id="name" placeholder="Enter your name" />
+//                     </div>
+//                     <div className="flex flex-col gap-2">
+//                         <Label htmlFor="email">
+//                             Email
+//                         </Label>
+//                         <Input id="email" type="email" placeholder="Enter your email" />
+//                     </div>
+//                     <div className="flex flex-col gap-2">
+//                         <Label htmlFor="message">
+//                             Message
+//                         </Label>
+//                         <Textarea id="message" placeholder="Enter your message" />
+//                     </div>
+//                 </div>
+//                 {/* <DialogFooter>
+//                     <Button type="submit">Send Message</Button>
+//                 </DialogFooter> */}
+//             </DialogContent>
+//         </Dialog>
+//     )
+// }
