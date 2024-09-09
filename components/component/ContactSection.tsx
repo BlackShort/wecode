@@ -48,9 +48,9 @@ export const ContactSection = () => {
                         priority
                     />
                 </div>
-                <Link target='_blank' href={'https://chat.whatsapp.com/BuU2bAc6h7n3KEPyG8ZXGe'}>
+{/*                 <Link target='_blank' href={'https://chat.whatsapp.com/BuU2bAc6h7n3KEPyG8ZXGe'}>
                     <Button variant="outline" className="hidden md:inline-flex bg-green-500 mt-4 text-white hover:bg-green-600">Let&apos;s Connect</Button>
-                </Link>
+                </Link> */}
             </div>
         </section>
     );
