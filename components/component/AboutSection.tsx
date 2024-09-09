@@ -45,6 +45,7 @@ export const AboutUsSection = () => {
                                 programming. We offer a supportive environment for beginners and experienced coders alike to learn,
                                 collaborate, and grow their skills.
                             </p>
+                            
                             <p className="text-gray-700 text-justify">
                                 Founded by <span className="font-semibold text-blue-700">Dr. Ankur Singh Bisht</span>, WeCode began with a vision to create a nurturing space where
                                 individuals could not only learn coding but also engage with a vibrant community of like-minded
