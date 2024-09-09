@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 // import { motion } from 'framer-motion';
 import wecodeEvent from '@/assets/WeCode_Link.jpg';
+import wecode2nd from '@/assets/wecode2nd.jpg';
+
 // import {
 //     Dialog,
 //     DialogContent,
@@ -33,6 +35,14 @@ export const ContactSection = () => {
                 <div className="rounded-lg shadow-sm pb-4 w-[25rem] border-[2px] overflow-hidden border-slate-50 mx-auto">
                     <Image
                         src={wecodeEvent}
+                        alt={'WeCode'}
+                        className="object-cover object-top rounded-lg"
+                        priority
+                    />
+                </div>
+                <div className="rounded-lg shadow-sm pb-4 w-[25rem] border-[2px] overflow-hidden border-slate-50 mx-auto">
+                    <Image
+                        src={wecode2nd}
                         alt={'WeCode'}
                         className="object-cover object-top rounded-lg"
                         priority
