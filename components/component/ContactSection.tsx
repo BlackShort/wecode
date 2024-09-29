@@ -41,10 +41,10 @@ export const ContactSection = () => {
                                 className="object-cover object-top rounded-lg w-full"
                                 priority
                             />
-                            <Link target='_blank' href={'https://chat.whatsapp.com/BuU2bAc6h7n3KEPyG8ZXGe'}>
-                                <Button variant="outline" className="hidden md:inline-flex bg-green-500 mt-4 text-white hover:bg-green-600">Let&apos;s Connect</Button>
-                            </Link>
                         </div>
+                        <Link target='_blank' href={'https://chat.whatsapp.com/BuU2bAc6h7n3KEPyG8ZXGe'}>
+                            <Button variant="outline" className="hidden md:inline-flex bg-green-500 mt-4 text-white hover:bg-green-600">Let&apos;s Connect</Button>
+                        </Link>
                     </div>
                     <div className="flex flex-col gap-2">
                         <div className="rounded-lg shadow-sm pb-4 w-[25rem] max-h-[25rem] border-[2px] overflow-hidden border-slate-50 mx-auto">
