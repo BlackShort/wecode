@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 // import { motion } from 'framer-motion';
 import wecode1st from '@/assets/wecode1st.png';
-import wecode2nd from '@/assets/wecode2nd.jpg';
+import wecode2nd from '@/assets/wecode2nd.png';
 
 // import {
 //     Dialog,
@@ -34,11 +34,11 @@ export const ContactSection = () => {
                 </motion.div> */}
                 <div className="flex flex-col md:flex-row w-full gap-4">
                     <div className="flex flex-col gap-2">
-                        <div className="rounded-lg shadow-sm pb-4 w-[25rem] border-[2px] overflow-hidden border-slate-50 mx-auto">
+                        <div className="rounded-lg shadow-sm pb-4 w-[25rem] max-h-[25rem] border-[2px] overflow-hidden border-slate-50 mx-auto">
                             <Image
                                 src={wecode1st}
                                 alt={'WeCode'}
-                                className="object-cover object-top rounded-lg h-[300px] w-full"
+                                className="object-cover object-top rounded-lg w-full"
                                 priority
                             />
                             <Link target='_blank' href={'https://chat.whatsapp.com/BuU2bAc6h7n3KEPyG8ZXGe'}>
@@ -47,11 +47,11 @@ export const ContactSection = () => {
                         </div>
                     </div>
                     <div className="flex flex-col gap-2">
-                        <div className="rounded-lg shadow-sm pb-4 w-[25rem] border-[2px] overflow-hidden border-slate-50 mx-auto">
+                        <div className="rounded-lg shadow-sm pb-4 w-[25rem] max-h-[25rem] border-[2px] overflow-hidden border-slate-50 mx-auto">
                             <Image
                                 src={wecode2nd}
                                 alt={'WeCode'}
-                                className="object-cover object-top rounded-lg h-[300px] w-full"
+                                className="object-cover object-top rounded-lg w-full"
                                 priority
                             />
                         </div>
